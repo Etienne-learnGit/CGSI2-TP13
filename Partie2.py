@@ -14,21 +14,29 @@ class binaryTree :
             return False
 
     def size(self, node):
-        if node.getRight() == None and node.getLeft() == None :
-            return +0
-        elif node.getRight() != None and node.getLeft() != None :
-            return self.size(node.getRight()) + self.size(node.getLeft()) + 2
-        elif node.getRight() != None :
-            return self.size(node.getRight()) + 1
-        elif node.getLeft() != None :
-            return self.size(node.getLeft()) + 1
+        if node is None :
+            return + 0
+        else :
+            return self.size(node.getRight()) + self.size(node.getLeft()) + 1
 
     def printValues(self, node):
-        return
+        if node is None :
+            return ""
+        else :
+            return str(node.getVal()) +" "+ self.printValues(node.getRight()) + self.printValues(node.getLeft())
+
     def sumValues(self, node):
-        return
+        if node is None :
+            return 0
+        else :
+            return self.sumValues(node.getRight()) + self.sumValues(node.getLeft()) + node.getVal()
+
     def numberLeaves(self, node):
-        return
+        if (node.getLeft() == None) and (node.getRight() == None) :
+            return + 1
+        else :
+            return self.numberLeaves(node.getRight()) + self.numberLeaves(node.getRight())
+
     def numberInternalNodes(self, node):
         return
     def height(self, node):
