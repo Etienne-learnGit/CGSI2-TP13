@@ -1,5 +1,5 @@
-from Partie1 import node
-from Partie2 import binaryTree
+from Partie1 import *
+from Partie2 import *
 
 N21 = node(21, None, None)
 N18 = node(18, None, None)
@@ -13,6 +13,7 @@ N17 = node(17, N19, None)
 N5 = node(5, N6, N4)
 
 N12 = node(12, N17, N5)
-
-
 Tree = binaryTree(N12)
+
+print(N3)
+print( Tree.size(Tree.getRoot()) )

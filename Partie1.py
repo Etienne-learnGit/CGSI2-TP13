@@ -16,3 +16,6 @@ class node :
         self.__right = newRight
     def setLeft(self, newLeft):
         self.__left = newLeft
+
+    def __str__(self):
+        return ('la valeur du noeud est : '+str(self.__val))
