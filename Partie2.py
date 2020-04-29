@@ -43,13 +43,19 @@ class binaryTree :
         return self.size(node)-self.numberLeaves(node)
 
     def height(self, node): #retourne la hauteur de l'arbre
-        if node.getLeft() is None and node.getRight() is None :
-            return + 0
+        if node is None:
+            return - 1
         else :
-            return self.height(node.getLeft()) + self.height(node.getRight) + 1
+            return max(self.height(node.getRight()), self.height(node.getLeft())) + 1
 
-    def belongs(self, node, val): #qui vérifie si val est une des valeurs d'un noeuds de l'arbre
-        return
+    def belongs(self, node, val): #qui vérifie si val est une des valeurs d'un noeud de l'arbre
+        if node is None:
+            return False
+        if node.getVal() == val:
+            return True
+        else:
+            return self.belongs(node.getLeft(), val) or self.belongs(node.getRight(), val)
+
     def ancestors(self, node, val): #qui affiche les antécédents d'un arbre
         return
     def descendants(self, node, val): #qui affiche les descendants d'un arbre
