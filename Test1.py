@@ -14,9 +14,11 @@ N5 = node(5, N6, N4)
 
 N12 = node(12, N17, N5)
 Tree = binaryTree(N12)
+Racine = Tree.getRoot()
 
-
-#print( Tree.size(Tree.getRoot()) )
-#print( Tree.printValues(Tree.getRoot()) )
-#print( Tree.sumValues(Tree.getRoot()) )
-print( Tree.numberLeaves(Tree.getRoot()) )
+#print( Tree.size(Racine) )
+#print( Tree.printValues(Racine) )
+#print( Tree.sumValues(Racine) )
+#print( Tree.numberLeaves(Racine) )
+#print( Tree.numberInternalNodes(Racine) )
+print( Tree.height(Racine) )
