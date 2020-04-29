@@ -56,6 +56,7 @@ class binaryTree :
         else:
             return self.belongs(node.getLeft(), val) or self.belongs(node.getRight(), val)
 
+
     def ancestors(self, node, val): #qui affiche les antécédents d'un arbre
         return
     def descendants(self, node, val): #qui affiche les descendants d'un arbre
