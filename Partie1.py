@@ -19,3 +19,4 @@ class node :
 
     def __str__(self):
         return ('la valeur du noeud est : '+str(self.__val))
+
